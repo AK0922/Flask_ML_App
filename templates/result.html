@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Result</title>
+        <link rel = "stylesheet" type= "text/css" href = "{{url_for('static',filename='css/style.css')}}">
+    </head>
+    <body>
+        <header>
+            <div class = "container">
+                <div id = "brandname">
+                    ML APP
+                </div>
+                <h2>Results</h2>
+            </div>
+        </header>
+        <p style="color:royalblue;font-size: 25;text-align: justify;"><b>Results for comments</b></p>
+        <div class="results">
+            {% if prediction == 1%}
+            <h2 style = "color:red;">Spam</h2>
+            {% elif prediction == 0 %}
+            <h2 style="color: blue;">Ham</h2>
+            {% endif %}
+        </div>
+    </body>
+</html>
